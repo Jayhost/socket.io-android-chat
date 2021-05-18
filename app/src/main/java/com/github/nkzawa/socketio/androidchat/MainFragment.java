@@ -86,7 +86,7 @@ public class MainFragment extends Fragment {
         mSocket.on(Socket.EVENT_CONNECT,onConnect);
         mSocket.on(Socket.EVENT_DISCONNECT,onDisconnect);
         mSocket.on(Socket.EVENT_CONNECT_ERROR, onConnectError);
-        mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+        //mSocket.on(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
         mSocket.on("new message", onNewMessage);
         mSocket.on("user joined", onUserJoined);
         mSocket.on("user left", onUserLeft);
@@ -112,7 +112,7 @@ public class MainFragment extends Fragment {
         mSocket.off(Socket.EVENT_CONNECT, onConnect);
         mSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
         mSocket.off(Socket.EVENT_CONNECT_ERROR, onConnectError);
-        mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
+        //mSocket.off(Socket.EVENT_CONNECT_TIMEOUT, onConnectError);
         mSocket.off("new message", onNewMessage);
         mSocket.off("user joined", onUserJoined);
         mSocket.off("user left", onUserLeft);
